@@ -1,12 +1,32 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <Header />
+    <div class="wrap">
+      <Menu />
+      <Content />
+    </div>
+    <Footer />
   </div>
-  <router-view/>
 </template>
 
-<style>
+<script>
+import Header from "@/components/Layouts/Header";
+import Menu from "@/components/Layouts/Menu";
+import Content from "@/components/Layouts/Content";
+import Footer from "@/components/Layouts/Footer";
+
+export default {
+  name: "app",
+  components: {
+    Footer,
+    Header,
+    Menu,
+    Content
+  }
+}
+</script>
+
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,16 +35,7 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.wrap {
+  display: flex;
 }
 </style>
