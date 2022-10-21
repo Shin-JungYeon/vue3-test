@@ -2,7 +2,7 @@
   <div>
     <Header />
     <div class="wrap">
-      <Menu />
+      <SideBar />
       <Content />
     </div>
     <Footer />
@@ -11,7 +11,7 @@
 
 <script>
 import Header from "@/components/Layouts/Header";
-import Menu from "@/components/Layouts/Menu";
+import SideBar from "@/components/Layouts/SideBar";
 import Content from "@/components/Layouts/Content";
 import Footer from "@/components/Layouts/Footer";
 
@@ -20,7 +20,7 @@ export default {
   components: {
     Footer,
     Header,
-    Menu,
+    SideBar,
     Content
   }
 }
